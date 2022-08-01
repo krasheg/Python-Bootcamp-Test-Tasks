@@ -4,7 +4,7 @@ import hashlib
 
 def hash_string(s: str, algorithm: str = 'sha256', to_string: bool = True):
     """
-    Function  returns a hash object or
+    Function  returns a hash object or a HEX string representing the hash
     :param s: string for hashing
     :param algorithm: hashing algorithm (available: 'md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512')
     :param to_string: if true- returns a HEX string representing the hash, if false- returns hex object
