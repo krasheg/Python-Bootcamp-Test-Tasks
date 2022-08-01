@@ -8,7 +8,7 @@ import os
 
 def video_to_gif(link: str, filename: str = 'TikTok Example'):
     """
-    This function downloads video from url and converts it into .gif and returns it abs path
+    This function downloads video from url and converts it into .gif and returns it`s abs path
     :param link: url for video
     :param filename: name of video
     :return: abs path to .gif file
@@ -25,7 +25,7 @@ def video_to_gif(link: str, filename: str = 'TikTok Example'):
         for chunk in r.iter_content(chunk_size=1024 * 1024):
             if chunk:
                 f.write(chunk)
-    # use moviepy lib for convert .mp4 to gif
+    # using moviepy lib for convert .mp4 to gif
     videoclip = VideoFileClip(filename)
     # creating a filename for .gif and try to save it
     path = Path(filename.replace(' ', '-').split(".")[0] + ".gif")
