@@ -57,7 +57,8 @@ Get average rating among all films"""
     def remove_notes(self, film_name):
         # function for removing notes
         self.df.drop(self.df[self.df['film_name'] == film_name].index, inplace=True)
-
+        self.df.to_csv(self.path, index=False)
+        return self.df
     def get_highest_rating(self):
         # function returns film with highest rating
         return self.df[self.df.rating == max(self.df.rating)]
